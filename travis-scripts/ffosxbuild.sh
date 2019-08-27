@@ -60,7 +60,7 @@ if [ ! -z "$CI" ]; then
     if [[ "$PYVER" < "3" ]]; then
         dmgname=FontForge-$builddate-${HASH:0:7}-$PYTHON.app.dmg
     else
-        dmgname=FontForge-$builddate-${HASH:0:7}.app.dmg
+        dmgname=FontForge-$builddate-${HASH:0:7}-asan.app.dmg
     fi
 
     hdiutil create -size 800m   \

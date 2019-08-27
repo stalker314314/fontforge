@@ -124,6 +124,8 @@ find_package_auto(ENABLE_LIBTIFF          TIFF)
 find_package_auto(ENABLE_WOFF2            WOFF2)
 find_package_auto(ENABLE_CODE_COVERAGE    Gcov)
 
+add_compile_options(-fsanitize=address -O1 -fno-omit-frame-pointer -g)
+add_link_options(-fsanitize=address)
 add_subdirectory(inc)
 add_subdirectory(Unicode)
 add_subdirectory(gutils)
